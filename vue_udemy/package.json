@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "vee-validate": "^3.4.14"
+  }
+}
