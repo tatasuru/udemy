@@ -27,7 +27,7 @@
 
   <div id="app">
 
-    <form action="" @submit.prevent="validate">
+    <form action="" @submit="validate">
       <p v-if="errors.length">
         <ul>
           <li class="error" v-for="error in errors">{{error}}</li>
@@ -97,18 +97,7 @@
         validate(){
           this.errors = []
           if(!this.contact.caution ){
-            this.errors.push("注意事項にチェックをつけてください。")
-          }
-          if(!this.contact.gender ){
-            this.errors.push("性別を選択してください")
-          }
-          if(!this.contact.yourName ){
-            this.errors.push("名前を入力してください！")
-          } else if(this.contact.yourName.length < 3 ){
-            this.errors.push("名前の文字数が足りません。")
-          }
-          if(!this.errors.length){
-            this.errors.push("送信完了です。")
+            this.errors.push("注意事項にチェック")
           }
         }
       },
